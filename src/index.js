@@ -28,6 +28,17 @@ exports.max = function max(array) {
     }
 }
 
-exports.avg = function avg (array) {
-    return 0;
+exports.avg = function avg(array) {
+    if (arguments.length === 0 || array.length === 0 ){
+        return 0
+    } else {
+        let i;
+        let sum = 0;
+        let avg;
+        for (i = 0; i < array.length; i++) {
+            sum = sum + array[i]
+        }
+        avg = sum / array.length;
+        return avg;
+    }
 }
